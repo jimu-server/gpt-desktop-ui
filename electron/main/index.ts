@@ -104,7 +104,6 @@ function createWindow() {
         icon: appIcon,
         frame: false,
         show: false,
-        maximizable: false,
         titleBarStyle: 'hidden',
         webPreferences: {
             spellcheck: false,

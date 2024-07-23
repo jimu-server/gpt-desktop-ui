@@ -13,7 +13,8 @@
         </div>
       </div>
       <q-space/>
-      <MessageHeaderBar/>
+      <HeaderToolBar/>
+      <WindowBtnGroup/>
     </q-toolbar>
     <div ref="messageList" class="column relative-position" style="flex-grow:1;overflow-x: hidden;">
       <q-scroll-area
@@ -83,6 +84,8 @@ import {useGptStore} from "@/components/tool-components/chatGptTool/store/gpt";
 import {updateTheme} from "@/components/tool-components/chatGptTool/style/update";
 import ChatMessage from "@/components/tool-components/chatGptTool/chat/message/ChatMessage.vue";
 import MessageHeaderBar from "@/components/tool-components/chatGptTool/chat/message/MessageHeaderBar.vue";
+import HeaderToolBar from "@/components/system-components/desktop/HeaderToolBar.vue";
+import WindowBtnGroup from "@/components/system-components/desktop/WindowBtnGroup.vue";
 
 const scrollAreaRef = ref()
 const ctx = useGptStore()

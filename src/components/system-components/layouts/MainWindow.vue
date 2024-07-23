@@ -7,15 +7,17 @@
     >
       <slot name="header">
         <q-toolbar class="bg-transparent row"
-               :style="{
+                   :style="{
             padding:0,
             height:'40px'
           }">
           <q-space/>
-          <WindowThemeBtn/>
-          <WindowMinimizeBtn/>
-          <WindowToggleBtn/>
-          <WindowCloseBtn2/>
+          <!--          <WindowThemeBtn/>
+                    <WindowMinimizeBtn/>
+                    <WindowToggleBtn/>
+                    <WindowCloseBtn2/>-->
+          <HeaderToolBar/>
+          <WindowBtnGroup/>
         </q-toolbar>
       </slot>
     </q-header>
@@ -51,6 +53,8 @@ import WindowToggleBtn from "@/components/system-components/desktop/WindowToggle
 import WindowMinimizeBtn from "@/components/system-components/desktop/WindowMinimizeBtn.vue";
 import WindowThemeBtn from "@/components/system-components/desktop/WindowThemeBtn.vue";
 import {useThemeStore} from "@/components/system-components/store/theme";
+import HeaderToolBar from "@/components/system-components/desktop/HeaderToolBar.vue";
+import WindowBtnGroup from "@/components/system-components/desktop/WindowBtnGroup.vue";
 
 const tool = useToolStore()
 const $q = useQuasar()
