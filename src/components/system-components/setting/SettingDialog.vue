@@ -22,11 +22,10 @@
         <q-splitter
             v-model="splitterModel"
             :limits="splitterModelLimit"
-            style="overflow: hidden"
             class="fit"
         >
           <template v-slot:before>
-            <div class="fit" style="overflow: hidden">
+            <div class="fit column">
               <SettingItemList v-model:tab="tab" :list="app.settings"/>
             </div>
           </template>
@@ -49,25 +48,14 @@
 import {ref, watch} from "vue";
 import {AppSetting} from "@/components/system-components/model/system";
 import {useAppStore} from "@/components/system-components/store/app";
+import SettingItemList from "@/components/system-components/setting/SettingItemList.vue";
+import SettingView from "@/components/system-components/setting/SettingView.vue";
 
 const model = defineModel({default: false, required: true})
 const splitterModel = ref(15)
 const splitterModelLimit = ref([15, 15])
-const text = ref("")
-const tab = ref("mails")
+const tab = ref("")
 const app = useAppStore()
-const list = ref<AppSetting[]>([
-  {
-    id: "1",
-    name: "账号设置",
-    value: "UserInfoSetting",
-  },
-  {
-    id: "2",
-    name: "Ollama",
-    value: "OllamaSetting",
-  }
-])
 
 
 function init() {

@@ -13,7 +13,14 @@ export const useAppStore = defineStore('app', {
                     height: 0
                 },
             },
-            settings: [] as Tree<AppSetting<any>>[]
+            settings: [
+                {
+                    id: "2",
+                    name: "Ollama",
+                    value: "OllamaSetting",
+                    setting: '"{}"',
+                }
+            ] as AppSetting<any>[]
         }
     },
     persist: true,

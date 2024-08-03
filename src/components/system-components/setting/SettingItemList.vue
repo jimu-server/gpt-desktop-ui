@@ -13,7 +13,7 @@
         indicator-color="transparent"
         @update:modelValue="select"
     >
-      <q-tab v-for="item in list" :name="item.entity.id" :label="item.entity.name" :ripple="false"/>
+      <q-tab v-for="item in list" :name="item.id" :label="item.name" :ripple="false"/>
     </q-tabs>
   </div>
 
@@ -26,10 +26,10 @@ import {ref} from "vue";
 const model = defineModel('tab', {default: ''})
 const text = ref('')
 const props = defineProps<{
-  list: Tree<AppSetting>[]
+  list: AppSetting<any>[]
 }>()
 const emit = defineEmits({
-  check: (item: AppSetting) => {
+  check: (item: AppSetting<any>) => {
 
   }
 })

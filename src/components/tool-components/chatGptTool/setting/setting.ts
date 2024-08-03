@@ -4,4 +4,6 @@ export interface OllamaSetting {
     host?: string
     // 本地模型存储路径
     ollamaModel?: string
+
+    localPath?: string
 }

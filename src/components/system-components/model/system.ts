@@ -183,3 +183,4 @@ export interface AccountList {
     account: string
     password: string
 }
+
